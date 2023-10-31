@@ -3,33 +3,39 @@ package proyectobiblioteca;
 import java.util.ArrayList;
 
 public class Usuario {
-     private String nombre;
-    private int identificacion;
-    private ArrayList<Libro> librosPrestados;
+    private String idUsuario;
+    private String nombre;
+    private String direccion;
 
-    public Usuario(String nombre, int identificacion) {
+    public Usuario(String idUsuario, String nombre, String direccion) {
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
-        this.identificacion = identificacion;
-        this.librosPrestados = new ArrayList<>();
+        this.direccion = direccion;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public int getIdentificacion() {
-        return identificacion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void tomarPrestado(Libro libro) {
-        librosPrestados.add(libro);
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void devolverLibro(Libro libro) {
-        librosPrestados.remove(libro);
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
-
-    public ArrayList<Libro> getLibrosPrestados() {
-        return librosPrestados;
-    }
+    
+    
 }

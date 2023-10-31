@@ -1,18 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyectobiblioteca;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author burro
- */
 public class Biblioteca {
     private ArrayList<Libro> librosDisponibles;
-
+    private ArrayList<Usuario> usuariosRegistrados;
+    private ArrayList<Prestamo> prestamosRealizados;
+    
     public Biblioteca() {
         librosDisponibles = new ArrayList<>();
     }
@@ -51,6 +45,31 @@ public class Biblioteca {
         return resultados;
     }
 
+    /*
+    Permite a un usuario tomar prestado un libro de la biblioteca
+    */
+    
+    public void realizarPrestamo(String idUsuario, String idLibro){
+        if ( == true){
+            
+        }
+    }
+    
+    /*
+    Permite a un usuario devolver un libro a la biblioteca
+    */
+    
+    public void realizarDevolucion(String idUsuario, String idLibro){
+        if (this.librosDisponibles == true){
+            
+        }
+    }
+    
+    // devuelve la lista de libros disponibles en la biblioteca
+    public void verLibrosDisponibles(){
+    
+    }
+    
     public void prestarLibro(Usuario usuario, Libro libro) {
         if (libro.isDisponible()) {
             usuario.tomarPrestado(libro);
